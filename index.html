@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <title>Skwize.dev | SwiftPanel</title>
+</head>
+<body>
+    <header>
+        <div class="content">
+            <span class="header-title">Skwize.dev</span>
+            <ul class="social-links">
+                <li class="social-link"><a target="_blank" href="https://www.youtube.com/@Skwize-" class="social-link"><img src="./assets/images/youtube.svg" alt="youtube"></a></li>
+                <li class="social-link"><a target="_blank" href="https://github.com/skwize" class="social-link"><img src="./assets/images/github.svg" alt="github"></a></li>
+                <li class="social-link"><a target="_blank" href="https://t.me/kxvbdkucg" class="social-link"><img src="./assets/images/telegram.svg" alt="telegram"></a></li>
+                <li class="social-link"><a target="_blank" href="https://www.instagram.com/skwize.life/" class="social-link"><img src="./assets/images/instagram.svg" alt="instagram"></a></li>
+            </ul>
+        </div>
+    </header>
+    <section class="presentation">
+        <div class="content">
+            <div class="product-info">
+                <img src="./assets/images/SwiftPanelLogo.svg" class="product-icon">
+                <div class="info-block">
+                    <h1 class="product-title">SwiftPanel</h1>
+                    <span class="product-description">A simple utility designed primarily for Windows 11 laptops</span>
+                    <div class="comming-soon-btn">Comming soon</div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <img src="./assets/images/mouse.svg" alt="" class="scroll-down-img">
+                <div class="text">
+                    <span class="main">Scroll down</span>
+                    <span class="second">For all features</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="features">
+        <div class="content">
+            <div class="features_pagination">
+                <label class="feature" for="system_monitoring" id="feature_sys" onclick="{return select_page_first()}">
+                    System Monitoring
+                    <input type="radio" name="pagination"  class="feature-radiobtn" id="system_monitoring" checked>
+                </label>
+                <label class="feature" id="feature_win" onclick="{return select_page_sec()}">
+                    Window Manager
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="window_manager">
+                </label>
+                <label class="feature" id="feature_key" onclick="{return select_page_third()}">
+                    Keyboard Cleaning
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="keyboard_cleaning">
+                </label>
+            </div>
+            <div class="features_pages">
+                <div class="system_monitoring_page feature-page">
+                    <svg width="200" height="200" class="chart-container">
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="back" />
+                        <!-- Progress circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="front" id="progress_cpu" />
+                        <g class="radial-text">
+                            <text x="100" y="100" alignment-baseline="central" text-anchor="middle" id="percentage cpu-percentage">CPU</text>
+                        </g>
+                    </svg>
+                    <svg width="200" height="200" class="chart-container">
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="back" />
+                        <!-- Progress circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="front" id="progress-circle" />
+                        <g class="radial-text">
+                            <text x="100" y="100" alignment-baseline="central" text-anchor="middle" id="percentage">RAM</text>
+                        </g>
+                    </svg>
+                    <svg width="200" height="200" class="chart-container">
+                        <!-- Background circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="back" />
+                        <!-- Progress circle -->
+                        <circle cx="100" cy="100" r="90" fill="none" class="front" id="progress-circle" />
+                        <g class="radial-text">
+                            <text x="100" y="100" alignment-baseline="central" text-anchor="middle" id="percentage">GPU</text>
+                        </g>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="./assets/scripts/script.js"></script>
+</html>

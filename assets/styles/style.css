@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, ol, li {
+    list-style-type: none;
+}
+
+body {
+    font-family: "Noto-Sans", sans-serif;
+    color: #262626;
+}
+
+.content {
+    max-width: 1220px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+header {
+    margin-top: 25px;
+}
+
+header> .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.social-links {
+    width: 188px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-link {
+    width: 32px;
+    height: 32px;
+    transition: ease-in;
+    transition-duration: .2s;
+}
+
+.social-link:hover {
+    width: 35px;
+    height: 35px;
+}
+
+.social-link>img {
+    width: 100%;
+    height: 100%;
+}
+.presentation > .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.product-info {
+    margin: 0 auto;
+    margin-top: 205px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.product-icon{
+    width: 230px;
+    height: 230px;
+    margin-right: 36px;
+}
+.info-block {
+ width: 394px;
+}
+.product-title{
+    font-size: 72px;
+    line-height: 98px;
+    font-weight: 800;
+}
+.product-description{
+    font-size: 24px;
+    font-weight: 300;
+    color: #737373;
+}
+.comming-soon-btn{
+    width: 180px;
+    line-height: 45px;
+    text-align: center;
+    border: 1px solid #262626;
+    border-radius: 25px;
+    color: #262626;
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.scroll-down{
+    width: 220px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 120px;
+    margin-left: 30px;
+}
+
+.scroll-down-img{
+    width: 45px;
+    height: 60px;
+}
+
+.scroll-down>.text{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    animation: scroll-down-animation;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scroll-down-animation {
+    from {
+        margin-left: 10px;
+    }
+    50% {
+        margin-left: 15px;
+    }
+    to {
+        margin-left: 10px;
+    }
+}
+
+.scroll-down>.text>.main{
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33px;
+}
+.scroll-down>.text>.second{
+    font-size: 16px;
+    font-weight: 300;
+    color: #3E3E3E;
+}
+
+.features{
+    margin-top: 225px;
+}
+
+#feature_sys {
+    color: #3E3E3E;
+}
+
+.features_pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.feature{
+    font-size: 40px;
+    font-weight: 300;
+    color: #BFBFBF;
+    transition: ease-in;
+    transition-duration: .3s;
+    position: relative;
+}
+
+.feature:hover {
+    cursor: pointer;
+}
+
+.feature-radiobtn{
+    position: absolute;
+    display: block;
+    visibility: hidden;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.back {
+  stroke: #ddd;
+  stroke-width: 20px;
+}
+
+
+
+.front {
+  stroke-linecap: round;
+  stroke: #007bff;
+  stroke-width: 20px;
+  /* Animates the stroke */
+  stroke-dasharray: 565.48; /* (2 * PI * r) where r is 90 */
+  stroke-dashoffset: 565.48; /* (565.48 * (100 - percentage) / 100) */
+  transition: stroke-dashoffset 0.5s ease-in-out;
+  /* Rotates the circle to start from the top */
+  transform: rotate(-90deg);
+  transform-origin: center;
+}
+
+.radial-text text {
+  font-size: 32px;
+  fill: #333;
+}
+
+.features_pages{
+    width: 700px;
+    margin: 0 auto;
+    margin-top: 70px;
+}
+
+.feature-page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
