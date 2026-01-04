@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 
 
 * {
@@ -115,7 +115,7 @@ header> .content {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 120px;
+    margin-top: 200px;
     margin-left: 30px;
 }
 
@@ -157,7 +157,8 @@ header> .content {
 }
 
 .features{
-    margin-top: 225px;
+    height: 670px;
+    margin-top: 300px;
 }
 
 #feature_sys {
@@ -165,17 +166,18 @@ header> .content {
 }
 
 .features_pagination {
+    font-family: "Noto-Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 200;
     display: flex;
     flex-direction: row;
     justify-content: space-between
 }
 
 .feature{
-    font-size: 40px;
-    font-weight: 300;
     color: #BFBFBF;
-    transition: ease-in;
-    transition-duration: .3s;
+    transition: ease-out;
+    transition-duration: .25s;
     position: relative;
 }
 
@@ -193,29 +195,38 @@ header> .content {
     height: 100%;
 }
 
-.back {
-  stroke: #ddd;
-  stroke-width: 20px;
+.divider{
+    width: 2px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #BFBFBF;
 }
 
-
+.back {
+    stroke: #d3d3d3;
+    stroke-width: 20px;
+}
 
 .front {
-  stroke-linecap: round;
-  stroke: #007bff;
-  stroke-width: 20px;
-  /* Animates the stroke */
-  stroke-dasharray: 565.48; /* (2 * PI * r) where r is 90 */
-  stroke-dashoffset: 565.48; /* (565.48 * (100 - percentage) / 100) */
-  transition: stroke-dashoffset 0.5s ease-in-out;
-  /* Rotates the circle to start from the top */
-  transform: rotate(-90deg);
-  transform-origin: center;
+    stroke-linecap: round;
+    stroke: #7ea1ff;
+    stroke-width: 20px;
+    /* Animates the stroke */
+    stroke-dasharray: 565.48; /* (2 * PI * r) where r is 90 */
+    stroke-dashoffset: 565.48; /* (565.48 * (100 - percentage) / 100) */
+    transition: stroke-dashoffset 0.5s ease-in-out;
+    /* Rotates the circle to start from the top */
+    transform: rotate(-90deg);
+    transform-origin: center;
 }
 
 .radial-text text {
-  font-size: 32px;
-  fill: #333;
+    font-family: "Noto-Sans", sans-serif;
+    width: 100px;
+    line-height: 50px;
+    font-size: 32px;
+    font-weight: 300;
+    fill: #6b6b6b;
 }
 
 .features_pages{
@@ -228,4 +239,20 @@ header> .content {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    transition: ease-out;
+    transition-duration: .3s;
+}
+
+#cpu-main-text, #ram-main-text, #gpu-main-text{
+    transition: ease-in;
+    transition-duration: .1s;
+    pointer-events: none;
+}
+
+#cpu-percentage, #ram-percentage, #gpu-percentage{
+    font-size: 28px;
+    opacity: 0;
+    transition: ease-out;
+    transition-duration: .2s;
+    pointer-events: none;
 }
