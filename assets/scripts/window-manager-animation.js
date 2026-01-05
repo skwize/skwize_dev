@@ -44,7 +44,7 @@ function getPosition (positionId) {
         case 4:
             w = Math.floor(screenW/2) - 12;
             h = Math.floor(screenH/2) - 12;
-            l = Math.floor(screenW/2);
+            l = Math.floor(screenW/2) + 6;
             t = 6;
             break;
         case 5:
