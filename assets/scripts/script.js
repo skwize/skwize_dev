@@ -1,7 +1,7 @@
 'use strict'
-window.onload = function () {
+window.onload = () => {
     // Set event listeners
-    document.getElementById("cpu-graph").addEventListener('mouseenter', ()=>{
+    document.getElementById("cpu-graph").addEventListener("mouseenter", ()=>{
         document.getElementById('cpu-main-text').style.opacity = 0;
         document.getElementById("cpu-percentage").style.opacity = 100;
     });
@@ -25,9 +25,11 @@ window.onload = function () {
         document.getElementById('gpu-main-text').style.opacity = 100;
         document.getElementById("gpu-percentage").style.opacity = 0;
     });
-
+    
     //Start Animations
+    startSysMonitoringAnimation();
     startFeaturePagesAnimation();
+    
 }
 
 const sys_mon_span      = document.getElementById("feature_sys");
@@ -46,8 +48,6 @@ let page_number = 0; // 0 sys 1 win 2 key
 
 let feature_pages_animation             = undefined;
 let system_monitoring_page_animation    = undefined;
-let window_manager_page_animation       = undefined; // Not implemented
-let live_wallpaper_page_animation       = undefined; // Not implemented
 let re_started_animation                = undefined;
 
 
@@ -75,7 +75,7 @@ function startSysMonitoringAnimation () {
         gpuData = getFakeData(5, 10);
         document.getElementById("gpu-percentage").textContent = gpuData + "%"
         document.getElementById("progress_gpu").style.strokeDashoffset = 565.48 * (100 - gpuData) / 100;
-    }, 2000);
+    }, 1400);
 }
 
 function stopSysMonitoringAnimation () {
@@ -89,9 +89,6 @@ function startFeaturePagesAnimation () {
         return;
     }
 
-    systemMonitoringPage.style.opacity = 100;
-    startSysMonitoringAnimation();
-
     feature_pages_animation = setInterval (() => {
         switch (page_number){
             case 0:
@@ -101,6 +98,7 @@ function startFeaturePagesAnimation () {
                 kb_clean_span.style.color = "#bfbfbf";
                 
                 startSysMonitoringAnimation();
+                StopWindowManagerAnimation();
                 
                 systemMonitoringPage.style.opacity = 100;
                 windowManagerPage.style.opacity = 0;
@@ -115,6 +113,7 @@ function startFeaturePagesAnimation () {
                 kb_clean_span.style.color = "#bfbfbf";
                 
                 stopSysMonitoringAnimation();
+                StartWindowManagerAnimation();
                 
                 systemMonitoringPage.style.opacity = 0;
                 windowManagerPage.style.opacity = 100;
@@ -126,6 +125,7 @@ function startFeaturePagesAnimation () {
             case 2:
                 
                 stopSysMonitoringAnimation();
+                StopWindowManagerAnimation();
                 sys_mon_span.style.color = "#bfbfbf";
                 win_man_span.style.color = "#bfbfbf";
                 kb_clean_span.style.color = "#3e3e3e";
@@ -138,7 +138,7 @@ function startFeaturePagesAnimation () {
                 break;
         }
 
-    }, 6500)
+    }, 7500)
 }
 
 function stopFeaturePagesAnimation () {
@@ -153,7 +153,7 @@ function re_startFeaturePagesAnimation() {
 
     re_started_animation = setTimeout(()=>{
         startFeaturePagesAnimation();
-    },4500);
+    },12500);
 }
 
 
@@ -163,8 +163,9 @@ function select_page_first () {
     win_man_span.style.color = "#bfbfbf";
     kb_clean_span.style.color = "#bfbfbf";
 
-    stopFeaturePagesAnimation();
     startSysMonitoringAnimation();
+    stopFeaturePagesAnimation();
+    StopWindowManagerAnimation();
     
     systemMonitoringPage.style.opacity = 100;
     windowManagerPage.style.opacity = 0;
@@ -180,24 +181,30 @@ function select_page_sec () {
     win_man_span.style.color = "#3e3e3e";
     kb_clean_span.style.color = "#bfbfbf";
     
+    StartWindowManagerAnimation();
     stopSysMonitoringAnimation();
+    stopFeaturePagesAnimation();
     
     systemMonitoringPage.style.opacity = 0;
     windowManagerPage.style.opacity = 100;
     keyboardCleaningPage.style.opacity = 0;
-
+    
+    
     page_number = 1;
     re_startFeaturePagesAnimation();
 
     return;
 }
 function select_page_third () {
-    stopSysMonitoringAnimation();
     
     sys_mon_span.style.color = "#bfbfbf";
     win_man_span.style.color = "#bfbfbf";
     kb_clean_span.style.color = "#3e3e3e";
     
+    stopSysMonitoringAnimation();
+    stopFeaturePagesAnimation();
+    StopWindowManagerAnimation();
+
     systemMonitoringPage.style.opacity = 0;
     windowManagerPage.style.opacity = 0;
     keyboardCleaningPage.style.opacity = 100;
