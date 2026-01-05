@@ -1,0 +1,129 @@
+@media (max-width:990px) {
+    .feature-page {
+        max-width: 750px;
+    }
+
+    .laptop-view {
+        transition: ease-in-out;
+        transition-duration: .3s;
+    }
+
+    .laptop-view > .screen {
+        max-width: 580px;
+        max-height: 364px;
+        margin-top: 22px;
+    }
+
+    .taskbar {
+        height: 20px;
+    }
+
+    .dv_2{
+        display: none;
+    }
+}
+
+@media (max-width:780px) {
+    .feature-page {
+        max-width: 650px;
+    }
+    .laptop-view{
+        max-height: 355px;
+    }
+    .laptop-view > .screen {
+        max-width: 480px;
+        max-height: 300px;
+        margin-top: 20px;
+    }
+
+    .taskbar{
+        height: 15px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .product-icon{
+        margin: 0;
+    }
+
+    .product-info{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-block{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .features_pagination{
+        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .divider{
+        width: 200px;
+        height: 2px;
+    }
+
+    .dv_2{
+        display: block;
+    }
+}
+
+@media (max-width:650px){
+    .features_page {
+        max-height: 750px;
+    }
+    #system_monitoring_page{
+        max-height: 620px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .laptop-view {
+        max-height: 300px;
+    }
+
+    .laptop-view > .screen{
+        max-width: 405px;
+        max-height: 250px;
+    }
+
+    .taskbar {
+        height: 12px;
+    }
+}
+
+@media (max-width:550px) {
+    .laptop-view {
+        max-height: 260px;
+    }
+
+    .laptop-view > .screen{
+        max-width: 350px;
+        max-height: 220px;
+        margin-top: 15px;
+    }
+    .taskbar {
+        height: 10px;
+    }
+}
+
+@media (max-width:474px) {
+    .laptop-view {
+        max-height: 220px;
+    }
+
+    .laptop-view > .screen{
+        max-width: 295px;
+        max-height: 185px;
+        margin-top: 12px;
+    }
+    .taskbar {
+        height: 8px;
+    }
+}
