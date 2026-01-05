@@ -40,19 +40,19 @@
     <section class="features">
         <div class="content">
             <div class="features_pagination">
-                <span class="feature" for="system_monitoring" id="feature_sys" onclick="{return select_page_first()}">
+                <span class="feature" id="feature_sys">
                     System Monitoring
-                    <input type="radio" name="pagination"  class="feature-radiobtn" id="system_monitoring" checked>
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="sys_mon_radio" onclick="{return select_page_first()}" checked>
                 </span>
                 <span class="divider"></span>
-                <span class="feature" id="feature_win" onclick="{return select_page_sec()}">
+                <span class="feature" id="feature_win">
                     Window Manager
-                    <input type="radio" name="pagination" class="feature-radiobtn" id="window_manager">
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="win_man_radio" onclick="{return select_page_sec()}">
                 </span>
                 <span class="divider"></span>
-                <span class="feature" id="feature_key" onclick="{return select_page_third()}">
+                <span class="feature" id="feature_key">
                     Keyboard Cleaning
-                    <input type="radio" name="pagination" class="feature-radiobtn" id="keyboard_cleaning">
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="kb_cl_radio" onclick="{return select_page_third()}">
                 </span>
             </div>
             <div class="features_pages">
@@ -88,6 +88,8 @@
                         </g>
                     </svg>
                 </div>
+                <div class="feature-page" id="window_manager_page">Window Manager</div>
+                <div class="feature-page" id="keyboard_cleaning_page">Keyboard cleaning</div>
             </div>
         </div>
     </section>

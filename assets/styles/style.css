@@ -157,12 +157,11 @@ header> .content {
 }
 
 .features{
-    height: 670px;
     margin-top: 300px;
 }
 
-#feature_sys {
-    color: #3E3E3E;
+.features_pages{
+    height: 670px;
 }
 
 .features_pagination {
@@ -171,7 +170,8 @@ header> .content {
     font-weight: 200;
     display: flex;
     flex-direction: row;
-    justify-content: space-between
+    justify-content: space-between;
+    align-items: center;
 }
 
 .feature{
@@ -188,7 +188,7 @@ header> .content {
 .feature-radiobtn{
     position: absolute;
     display: block;
-    visibility: hidden;
+    opacity: 0;
     top: 0;
     left: 0;
     width: 100%;
@@ -241,6 +241,11 @@ header> .content {
     justify-content: space-between;
     transition: ease-out;
     transition-duration: .3s;
+    opacity: 0;
+}
+
+#feature_sys{
+    color: #3E3E3E;
 }
 
 #cpu-main-text, #ram-main-text, #gpu-main-text{
