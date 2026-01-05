@@ -50,9 +50,9 @@
                     <input type="radio" name="pagination" class="feature-radiobtn" id="win_man_radio" onclick="{return select_page_sec()}">
                 </span>
                 <span class="divider"></span>
-                <span class="feature" id="feature_key">
-                    Keyboard Cleaning
-                    <input type="radio" name="pagination" class="feature-radiobtn" id="kb_cl_radio" onclick="{return select_page_third()}">
+                <span class="feature" id="feature_live">
+                    Live Wallpapers
+                    <input type="radio" name="pagination" class="feature-radiobtn" id="live_wp_radio" onclick="{return select_page_third()}">
                 </span>
             </div>
             <div class="features_pages">
@@ -91,11 +91,21 @@
                 <div class="feature-page" id="window_manager_page">
                     <div class="laptop-view">
                         <div class="screen" id="laptop_screen">
+                            <img src="./assets/images/taskbar.png" class="taskbar" id="taskbar">
                             <span class="animation" id="snap-area-block"></span>
                         </div>
                     </div>
                 </div>
-                <div class="feature-page" id="keyboard_cleaning_page">Keyboard cleaning</div>
+                <div class="feature-page" id="live_wallpaper_page">
+                    <div class="laptop-view">
+                        <div class="screen live-wallpaper-screen">
+                            <img src="./assets/images/taskbar.png" class="taskbar" alt="">
+                            <video autoplay muted loop class="live-wallpaper">
+                                <source src="./assets/video/iB01NanjGq-RyouYamadaBocchitheRocklivewallpaper.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

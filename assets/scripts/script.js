@@ -34,7 +34,7 @@ window.onload = () => {
 
 const sys_mon_span      = document.getElementById("feature_sys");
 const win_man_span      = document.getElementById("feature_win");
-const kb_clean_span     = document.getElementById("feature_key");
+const live_wp_span     = document.getElementById("feature_live");
 
 let cpuData;
 let ramData;
@@ -42,7 +42,7 @@ let gpuData;
 
 const systemMonitoringPage  = document.getElementById("system_monitoring_page");
 const windowManagerPage     = document.getElementById("window_manager_page");
-const keyboardCleaningPage  = document.getElementById("keyboard_cleaning_page");
+const LiveWallpaperPage  = document.getElementById("live_wallpaper_page");
 
 let page_number = 0; // 0 sys 1 win 2 key
 
@@ -95,14 +95,14 @@ function startFeaturePagesAnimation () {
                 
                 sys_mon_span.style.color = "#3e3e3e";
                 win_man_span.style.color = "#bfbfbf";
-                kb_clean_span.style.color = "#bfbfbf";
+                live_wp_span.style.color = "#bfbfbf";
                 
                 startSysMonitoringAnimation();
                 StopWindowManagerAnimation();
                 
                 systemMonitoringPage.style.opacity = 100;
                 windowManagerPage.style.opacity = 0;
-                keyboardCleaningPage.style.opacity = 0;
+                LiveWallpaperPage.style.opacity = 0;
                 page_number = 1;
                 break;
 
@@ -110,14 +110,14 @@ function startFeaturePagesAnimation () {
                 
                 sys_mon_span.style.color = "#bfbfbf";
                 win_man_span.style.color = "#3e3e3e";
-                kb_clean_span.style.color = "#bfbfbf";
+                live_wp_span.style.color = "#bfbfbf";
                 
                 stopSysMonitoringAnimation();
                 StartWindowManagerAnimation();
                 
                 systemMonitoringPage.style.opacity = 0;
                 windowManagerPage.style.opacity = 100;
-                keyboardCleaningPage.style.opacity = 0;
+                LiveWallpaperPage.style.opacity = 0;
 
                 page_number = 2;
                 break;
@@ -128,11 +128,11 @@ function startFeaturePagesAnimation () {
                 StopWindowManagerAnimation();
                 sys_mon_span.style.color = "#bfbfbf";
                 win_man_span.style.color = "#bfbfbf";
-                kb_clean_span.style.color = "#3e3e3e";
+                live_wp_span.style.color = "#3e3e3e";
                 
                 systemMonitoringPage.style.opacity = 0;
                 windowManagerPage.style.opacity = 0;
-                keyboardCleaningPage.style.opacity = 100;
+                LiveWallpaperPage.style.opacity = 100;
 
                 page_number = 0;
                 break;
@@ -161,7 +161,7 @@ function re_startFeaturePagesAnimation() {
 function select_page_first () {
     sys_mon_span.style.color = "#3e3e3e";
     win_man_span.style.color = "#bfbfbf";
-    kb_clean_span.style.color = "#bfbfbf";
+    live_wp_span.style.color = "#bfbfbf";
 
     startSysMonitoringAnimation();
     stopFeaturePagesAnimation();
@@ -169,7 +169,7 @@ function select_page_first () {
     
     systemMonitoringPage.style.opacity = 100;
     windowManagerPage.style.opacity = 0;
-    keyboardCleaningPage.style.opacity = 0;
+    LiveWallpaperPage.style.opacity = 0;
 
     page_number = 0;
     re_startFeaturePagesAnimation();
@@ -179,7 +179,7 @@ function select_page_first () {
 function select_page_sec () {
     sys_mon_span.style.color = "#bfbfbf";
     win_man_span.style.color = "#3e3e3e";
-    kb_clean_span.style.color = "#bfbfbf";
+    live_wp_span.style.color = "#bfbfbf";
     
     StartWindowManagerAnimation();
     stopSysMonitoringAnimation();
@@ -187,7 +187,7 @@ function select_page_sec () {
     
     systemMonitoringPage.style.opacity = 0;
     windowManagerPage.style.opacity = 100;
-    keyboardCleaningPage.style.opacity = 0;
+    LiveWallpaperPage.style.opacity = 0;
     
     
     page_number = 1;
@@ -199,7 +199,7 @@ function select_page_third () {
     
     sys_mon_span.style.color = "#bfbfbf";
     win_man_span.style.color = "#bfbfbf";
-    kb_clean_span.style.color = "#3e3e3e";
+    live_wp_span.style.color = "#3e3e3e";
     
     stopSysMonitoringAnimation();
     stopFeaturePagesAnimation();
@@ -207,7 +207,7 @@ function select_page_third () {
 
     systemMonitoringPage.style.opacity = 0;
     windowManagerPage.style.opacity = 0;
-    keyboardCleaningPage.style.opacity = 100;
+    LiveWallpaperPage.style.opacity = 100;
 
     page_number = 2;
     re_startFeaturePagesAnimation();

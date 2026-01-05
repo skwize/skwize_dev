@@ -2,12 +2,14 @@
 
 const laptop_screen = document.getElementById("laptop_screen");
 const snap_area = document.getElementById("snap-area-block");
+const taskbar = document.getElementById("taskbar");
 
 let windowManagerAnimation = undefined;
 
 function getPosition (positionId) {
     const screenW = laptop_screen.offsetWidth
     const screenH = laptop_screen.offsetHeight;
+    const taskbarH = taskbar.offsetHeight;
 
     let SnapPosition;
 
@@ -19,19 +21,19 @@ function getPosition (positionId) {
     switch (positionId){
         case 0:
             w = Math.floor(screenW/2) - 12;
-            h = screenH - 12;
+            h = screenH - 12 - taskbarH;
             l = 6;
             t = 6;
             break;
         case 1:
             w = Math.floor(screenW/2) - 12;
-            h = screenH - 12;
+            h = screenH - 12 - taskbarH;
             l = Math.floor(screenW/2) + 6;
             t = 6
             break;
         case 2:
             w = screenW - 12;
-            h = screenH - 12;
+            h = screenH - 12 - taskbarH;
             l = 6;
             t = 6;
             break;
@@ -49,13 +51,13 @@ function getPosition (positionId) {
             break;
         case 5:
             w = Math.floor(screenW/2) - 12;
-            h = Math.floor(screenH/2) - 12;
+            h = Math.floor(screenH/2) - 12 - taskbarH;
             l = Math.floor(screenW/2) + 6;
             t = Math.floor(screenH/2) + 6;
             break;
         case 6:
             w = Math.floor(screenW/2) - 12;
-            h = Math.floor(screenH/2) - 12;
+            h = Math.floor(screenH/2) - 12 - taskbarH;
             l = 6;
             t = Math.floor(screenH/2) + 6;
             break;
